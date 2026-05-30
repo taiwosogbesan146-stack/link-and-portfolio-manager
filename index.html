@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adelani | Portfolio</title>
+    <meta
+      name="description"
+      content="Adelani's portfolio hub for websites, projects, profiles, and contact links."
+    >
+    <link rel="preload" href="assets/adelani-studio.png" as="image">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Adelani home">
+        <span class="brand-mark">A</span>
+        <span>Adelani</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#links">Links</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Portfolio hub</p>
+          <h1 id="hero-title">Adelani</h1>
+          <p class="hero-copy">
+            A clean home for websites, live projects, profiles, and the work worth sharing.
+          </p>
+          <div class="hero-actions" aria-label="Portfolio actions">
+            <a class="button primary" href="#links">
+              <span aria-hidden="true">+</span>
+              Add links
+            </a>
+            <a class="button secondary" href="#contact">Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="link-workspace" id="links" aria-labelledby="links-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Website links</p>
+            <h2 id="links-title">Adelani's Link Board</h2>
+          </div>
+          <div class="board-tools">
+            <label class="search-field">
+              <span class="sr-only">Search links</span>
+              <input id="searchInput" type="search" placeholder="Search links">
+            </label>
+            <button class="icon-button" id="resetLinks" type="button" title="Reset links" aria-label="Reset links">
+              <span aria-hidden="true">↺</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="filters" aria-label="Filter website links">
+          <button class="filter-button active" type="button" data-filter="All">All</button>
+          <button class="filter-button" type="button" data-filter="Featured">Featured</button>
+          <button class="filter-button" type="button" data-filter="Client">Client</button>
+          <button class="filter-button" type="button" data-filter="Product">Product</button>
+          <button class="filter-button" type="button" data-filter="Profile">Profile</button>
+        </div>
+
+        <div class="workspace-layout">
+          <form class="link-form" id="linkForm" aria-label="Add a website link">
+            <div class="field-group">
+              <label for="siteName">Site name</label>
+              <input id="siteName" name="siteName" type="text" maxlength="48" required>
+            </div>
+            <div class="field-group">
+              <label for="siteUrl">Website URL</label>
+              <input id="siteUrl" name="siteUrl" type="url" placeholder="https://example.com" required>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="siteType">Type</label>
+                <select id="siteType" name="siteType">
+                  <option>Featured</option>
+                  <option>Client</option>
+                  <option>Product</option>
+                  <option>Profile</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="siteStatus">Status</label>
+                <select id="siteStatus" name="siteStatus">
+                  <option>Live</option>
+                  <option>New</option>
+                  <option>Updated</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="siteNote">Short note</label>
+              <textarea id="siteNote" name="siteNote" maxlength="120" rows="3"></textarea>
+            </div>
+            <button class="button submit" type="submit">
+              <span aria-hidden="true">+</span>
+              Save link
+            </button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="links-panel">
+            <div class="stats-row" aria-label="Portfolio stats">
+              <div>
+                <strong id="linkCount">0</strong>
+                <span>links</span>
+              </div>
+              <div>
+                <strong id="featuredCount">0</strong>
+                <span>featured</span>
+              </div>
+              <div>
+                <strong id="liveCount">0</strong>
+                <span>live</span>
+              </div>
+            </div>
+            <div class="links-grid" id="linksGrid" aria-live="polite"></div>
+            <p class="empty-state" id="emptyState">No matching links.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="section-heading compact">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2 id="about-title">Built for a fast first impression</h2>
+          </div>
+        </div>
+        <div class="about-grid">
+          <article class="info-block">
+            <h3>Web presence</h3>
+            <p>
+              Keep client sites, experiments, products, and profiles together with a tidy,
+              searchable board.
+            </p>
+          </article>
+          <article class="info-block accent">
+            <h3>Simple upkeep</h3>
+            <p>
+              Add links from the page or edit the starter list in <code>script.js</code> when
+              you want the same set everywhere.
+            </p>
+          </article>
+          <article class="info-block">
+            <h3>Responsive by default</h3>
+            <p>
+              The layout adapts from a full desktop board to a compact mobile profile page.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let the next visitor know where to go.</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:hello@example.com">Email Adelani</a>
+          <a class="button secondary" href="#links">View links</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Adelani</span>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
